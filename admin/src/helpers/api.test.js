@@ -18,7 +18,7 @@ describe('api', () => {
     fetch.mockResponseOnce(JSON.stringify({ isLoggedIn: false }))
     const loginResult = await login('hello', 'world')
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/login')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/login')
     expect(loginResult).toBe(false)
   })
 
@@ -26,7 +26,7 @@ describe('api', () => {
     fetch.mockResponseOnce(JSON.stringify({ isLoggedIn: true }))
     const loginResult = await login('mrfox', 'mfoxe')
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/login')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/login')
     expect(loginResult).toBe(true)
   })
 
@@ -34,7 +34,7 @@ describe('api', () => {
     fetch.mockResponseOnce(JSON.stringify({ isLoggedIn: false }))
     const currentUser = await fetchCurrentUser()
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/status')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/status')
     expect(currentUser).toBe(undefined)
   })
 
@@ -49,7 +49,7 @@ describe('api', () => {
     }))
     const currentUser = await fetchCurrentUser()
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/status')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/status')
     expect(currentUser).toEqual({
       privilege: 1,
       id: 'abc123',
@@ -67,7 +67,7 @@ describe('api', () => {
     }))
     const users = await fetchUsers()
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/users')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/users')
     expect(users).toEqual([
       { id: 'abc123', username: 'mrfox', privilege: 1 },
       { id: 'def456', username: 'mfoxe', privilege: 2 }
@@ -82,7 +82,7 @@ describe('api', () => {
     }))
     const createdUser = await createUser(userObj)
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/users')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/users')
     expect(createdUser).toEqual({ username: 'mrfox', privilege: 1, password: 'helloworld' })
   })
 
@@ -93,7 +93,7 @@ describe('api', () => {
     }))
     const success = await updatePassword('helloworld', 'worldhello')
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/account')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/account')
     expect(success).toBe(true)
   })
 
@@ -101,7 +101,7 @@ describe('api', () => {
     fetch.mockResponseOnce(JSON.stringify({ error: false }))
     const success = await deleteUser('abc123')
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/users/abc123')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/users/abc123')
     expect(success).toBe(true)
   })
 
@@ -111,7 +111,7 @@ describe('api', () => {
       { key: '1234567890abcdef', timestamp: Date.now() }
     ])
     expect(fetch.mock.calls.length).toEqual(1)
-    expect(fetch.mock.calls[0][0]).toEqual('https://demo.trackcovid.net/admin/api/checkpoints')
+    expect(fetch.mock.calls[0][0]).toEqual('https://tracking-covid-19-gambia.herokuapp.com/admin/api/checkpoints')
     expect(success).toBe(true)
   })
 })
