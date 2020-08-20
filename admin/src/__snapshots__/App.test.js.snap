@@ -87,7 +87,7 @@ exports[`App component 1`] = `
       >
         TrackCOVID
          
-        Admin
+        Admin - <br> ANK ANALYTICS.
       </p>
     </form>
   </div>
