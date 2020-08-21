@@ -21,12 +21,12 @@ const rl = readline.createInterface({
 
 mutableStdout.muted = false
 
-rl.question('mongodb://<dbuser>:<dbpassword>@ds049211.mlab.com:49211/heroku_w7rc27pj', function (mongodbUri) {
+rl.question('\nEnter your production mongodb url (e.g. mongodb://user:pass@mongodb0.example.com:27017)\n', function (mongodbUri) {
   mongoose.connect(mongodbUri, { useNewUrlParser: true })
   const db = mongoose.connection
   db.once('open', function () {
-    rl.question('infos@ank-analytics.com', function (newUsername) {
-      rl.question('771467648XY', function (newPass) {
+    rl.question('\nEnter your new admin username\n', function (newUsername) {
+      rl.question('\nEnter your new admin password\n', function (newPass) {
         mutableStdout.muted = false
         const newUser = new User({
           username: newUsername,
