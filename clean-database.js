@@ -9,7 +9,7 @@ const Checkpoint = require('./models/checkpoint')
 
 const oneDay = 1000 * 60 * 60 * 24
 const estimatedDiagnosisDelay = Number(process.env['ESTIMATED_DX_DELAY_DAYS']) * oneDay
-const mongoDbUri = process.env.MONGODB_URI || 'mongodb://<dbuser>:<dbpassword>@ds049211.mlab.com:49211/heroku_w7rc27pj/checkpoints'
+const mongoDbUri = process.env.MONGODB_URI || 'mongodb://<dbuser>:<dbpassword>@ds049211.mlab.com:49211/heroku_w7rc27pj/checkpoints?retryWrites=false'
 
 const rl = readline.createInterface({
   input: process.stdin,
