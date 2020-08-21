@@ -13,9 +13,9 @@
   "author": "Tyler M Yasaka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tyleryasaka/TrackCOVID/issues"
+    "url": "https://github.com/mohamedndiayedev/tracking-covid-19-gambia/issues"
   },
-  "homepage": "https://github.com/tyleryasaka/TrackCOVID#readme",
+  "homepage": "https://github.com/mohamedndiayedev/tracking-covid-19-gambia#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
