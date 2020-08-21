@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohamedndiayedev/track-covid-19-gambia.git"
+    "url": "git+https://github.com/mohamedndiayedev/tracking-covid-19-gambia.git"
   },
   "author": "Tyler M Yasaka",
   "license": "MIT",
   "bugs": {
     "url": ""
   },
-  "homepage": "https://github.com/mohamedndiayedev/track-covid-19-gambia#readme",
+  "homepage": "https://github.com/mohamedndiayedev/tracking-covid-19-gambia#readme",
   "dependencies": {
     "@sendgrid/mail": "^7.2.0",
     "body-parser": "^1.19.0",
