@@ -86,12 +86,12 @@ exports[`Checkpoints component 1`] = `
     You may check your exposure status at any time through this web app. Learn more about TrackCOVID by visiting 
     <a
       className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-      href="https://trackcovid.net"
+      href="https://tracking-covid-19-gambia.herokuapp.com"
       onBlur={[Function]}
       onFocus={[Function]}
       target="_blank"
     >
-      https://trackcovid.net
+      https://tracking-covid-19-gambia.herokuapp.com
     </a>
     .
   </p>
